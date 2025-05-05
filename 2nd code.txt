@@ -1,0 +1,12 @@
+def handle_name_error():
+    try:
+        print(undefined_variable)
+    except NameError as e:
+        print(f"NameError: {e}")
+       
+    else:
+      print("No error")
+    finally:
+      print("Finally block executed")
+
+handle_name_error()

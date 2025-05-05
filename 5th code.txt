@@ -1,0 +1,16 @@
+def process_data(data):
+    try:
+        value = int(data)
+        if value < 0:
+            raise ValueError("Value must be non-negative")
+       
+        result = value * 2
+        return result
+    except ValueError as e:
+        print(f"Error: Invalid input: {e}")
+        return None
+
+# Example usage
+print(process_data("10"))
+print(process_data("-5"))
+print(process_data("abc"))

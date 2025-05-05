@@ -1,0 +1,15 @@
+def access_list_element(my_list, index):
+    try:
+        element = my_list[index]
+        return element
+    except IndexError:
+        return "Index is out of range"
+    except TypeError:
+        return "Invalid index type"
+
+
+my_list = [10, 20, 30]
+
+print(access_list_element(my_list, 1))  
+print(access_list_element(my_list, 5))
+print(access_list_element(my_list, "a"))  

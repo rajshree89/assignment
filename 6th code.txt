@@ -1,0 +1,19 @@
+class MyClass:
+    def __init__(self, value):
+        self.my_attribute = value
+
+def handle_attribute_error(obj, attribute_name):
+    try:
+        return getattr(obj, attribute_name)
+    except AttributeError:
+        print(f"Error: Object of type {type(obj).__name__} does not have attribute '{attribute_name}'.")
+        return None 
+obj = MyClass(10)
+
+value = handle_attribute_error(obj, "my_attribute")
+if value is not None:
+    print("Attribute value:", value)
+e
+value = handle_attribute_error(obj, "non_existent_attribute")
+if value is not None:
+    print("Attribute value:", value)

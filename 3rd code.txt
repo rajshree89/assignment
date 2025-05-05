@@ -1,0 +1,17 @@
+def access_dictionary_key(my_dict, key):
+    try:
+        value = my_dict[key]
+        print(f"Value for key '{key}': {value}")
+    except KeyError as e:
+        print(f"Error: Key '{e}' not found in the dictionary.")
+    except TypeError as e:
+        print(f"Error: Invalid key type: {e}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+# Example Usage
+my_dict = {"a": 1, "b": 2, "c": 3}
+
+access_dictionary_key(my_dict, "b")
+access_dictionary_key(my_dict, "d")
+access_dictionary_key(my_dict, 1)

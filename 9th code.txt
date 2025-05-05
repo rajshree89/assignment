@@ -1,0 +1,27 @@
+def error_handler():
+    try:
+        num = int(input("Enter a number: "))
+        result = 10 / num
+        my_dict = {"key": "value"}
+        print(my_dict["missing_key"])  
+        my_list = [1, 2, 3]
+        print(my_list[5]) 
+    except ValueError:
+        print("Oops! You entered an invalid number.")
+    except ZeroDivisionError:
+        print("Oops! Division by zero is not allowed.")
+    except IndexError:
+        print("Oops! You're trying to access an invalid index.")
+    except KeyError:
+        print("Oops! The specified key does not exist in the dictionary.")
+    except TypeError:
+        print("Oops! There's a mismatch in data types.")
+    except FileNotFoundError:
+        print("Oops! The file you're trying to access was not found.")
+    except AttributeError:
+        print("Oops! You're trying to access an attribute that doesn't exist.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+# Call the function
+error_handler()

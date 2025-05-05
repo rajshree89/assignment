@@ -1,0 +1,15 @@
+def divide(numerator, denominator):
+    try:
+        result = numerator / denominator
+        return result
+    except ZeroDivisionError:
+        return "Error: Cannot divide by zero."
+    except TypeError:
+        return "Error: Invalid input type. Please provide numbers."
+    except Exception as e:
+        return f"An unexpected error occurred: {e}"
+
+# Example usage
+print(divide(10, 2))
+print(divide(10, 0))
+print(divide(10, "a"))

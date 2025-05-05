@@ -1,0 +1,17 @@
+import importlib
+
+def import_module_with_handler(module_name):
+    try:
+        module = importlib.import_module(module_name)
+        return module
+    except ModuleNotFoundError:
+        print(f"Error: The module '{module_name}' was not found.")
+        return None
+
+# Example usage:
+my_module = import_module_with_handler('non_existent_module')
+
+if my_module:
+    print("Module imported successfully")
+else:
+    print("Module import failed")
